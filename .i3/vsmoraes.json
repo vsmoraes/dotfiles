@@ -1,0 +1,43 @@
+{
+  "icons": ["paxy97", "vsmoraes"],
+  "defaults": {
+    "warning": {
+      "fg": "#1d2021",
+      "bg": "#FF6D00"
+    },
+    "critical": {
+      "fg": "#fbf1c7",
+      "bg": "#cc241d"
+    },
+    "default-separators": false,
+    "separator-block-width": 0
+  },
+  "cycle": [
+    {
+      "fg": "#a3a3a3",
+      "bg": "#002029"
+    }
+  ],
+  "dnf": {
+    "good": {
+      "fg": "#002b36",
+      "bg": "#859900"
+    }
+  },
+  "battery": {
+    "charged": {
+      "fg": "#1d2021",
+      "bg": "#b8bb26"
+    },
+    "AC": {
+      "fg": "#1d2021",
+      "bg": "#b8bb26"
+    }
+  },
+  "bluetooth": {
+    "ON": {
+      "fg": "#1d2021",
+      "bg": "#b8bb26"
+    }
+  }
+}
