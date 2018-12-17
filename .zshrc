@@ -105,11 +105,3 @@ export PATH=$PATH:$GOPATH/bin:$GOROOT
 ### TMUX
 alias tmls="tmux ls"
 alias tm="tmux new-session -A -s "
-
-### MISC
-alias boblog="tail -f $CDPATH/bitbucket.org/dafiti/bob/data/logs/*.log"
-
-### MYSQLs
-alias mysql-local='mysql -h database.dev -A -uroot -proot'
-alias mysql-sandbox='mysql -A -ubob_integration -hdft-sap-db01.c9ugbcxsc6ky.us-east-1.rds.amazonaws.com -pnVQru3Mi7t bob_live'
-alias mysql-oms-qa='mysql -h sidious-api-qa.aws.dafitidev.com.br -A -uoms -pqed3dpoa -P 3307 oms'
