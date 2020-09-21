@@ -8,31 +8,36 @@ Plugin 'VundleVim/Vundle.vim'
 " ------Plugins-------
 Plugin 'scrooloose/nerdtree'
 Plugin 'tpope/vim-surround'
-Plugin 'gcmt/breeze.vim'
+" Plugin 'gcmt/breeze.vim'
 Plugin 'kien/ctrlp.vim'
 Plugin 'tomtom/tcomment_vim'
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 Plugin 'airblade/vim-gitgutter'
 Plugin 'davidhalter/jedi-vim'
-"Plugin 'joonty/vdebug'
+" Plugin 'joonty/vdebug'
 Plugin 'terryma/vim-multiple-cursors'
-Plugin 'shawncplus/phpcomplete.vim'
-Plugin 'kristijanhusak/vim-hybrid-material'
+" Plugin 'shawncplus/phpcomplete.vim'
 Plugin 'AutoComplPop'
-
+Plugin 'luochen1990/rainbow'
 
 " Color Themes
-Plugin 'colors'
+"Plugin 'colors'
+" Plugin 'kristijanhusak/vim-hybrid-material'
+Plugin 'dracula/vim', { 'name': 'dracula' }
 
 call vundle#end()
+
 let g:enable_bold_font = 1
-colorscheme hybrid_material
 set background=dark
 filetype plugin indent on
 set term=screen-256color
 set cursorline
 set colorcolumn=120
+let g:dracula_colorterm = 0
+colorscheme dracula
+
+let g:rainbow_active = 1 "set to 0 if you want to enable it later via :RainbowToggle
 
 """"""""
 if has('autocmd')
@@ -87,7 +92,6 @@ set smartcase
 " Don't use Ex mode, use Q for formatting
 "map Q gq
 
-
 " do not history when leavy buffer
 set hidden
 
@@ -129,7 +133,8 @@ vmap <C-m> gc
 let g:tcomment#replacements_xml={}
 inoremap <C-y>  <Esc>:redo<CR>
 " Tabs
-let g:airline_theme='badwolf'
+" let g:airline_theme='badwolf'
+let g:airline_theme='dracula'
 let g:airline#extensions#tabline#enabled = 1
 nnoremap <C-b>  :bprevious<CR>
 inoremap <C-b>  <Esc>:bprevious<CR>i
@@ -149,15 +154,14 @@ nnoremap <Leader>o :set nopaste<CR>
 noremap  <Leader>g :GitGutterToggle<CR>
 
 " this machine config
-if filereadable(expand("~/.vimrc.local"))
-  source ~/.vimrc.local
-endif
+" if filereadable(expand("~/.vimrc.local"))
+"   source ~/.vimrc.local
+" endif
 
 
 " multiple cursors config
 let g:multi_cursor_next_key='<C-d>'
 let g:multi_cursor_prev_key='<C-S-d>'
-
 
 autocmd FileType go setl noexpandtab tabstop=4 shiftwidth=4
 let g:go_fmt_command = "goimports"
